@@ -6,6 +6,9 @@ public class WeatherMain {
 		WeatherMaker wm = new WeatherMaker();
 		WeatherDTO [] ar = wm.init();
 		
+		for(int i=0;i<ar.length;i++) {
+			ar[i].toString();
+		}
 		
 
 	}
