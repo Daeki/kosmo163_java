@@ -14,7 +14,7 @@ public class StudentController {
 		boolean flag = true;
 		StudentDTO [] ar= null;
 		while(flag) {
-			System.out.println("1.학생정보초기화, 2.학생정보출력, 3.종 료");
+			System.out.println("1.학생정보초기화, 2.학생정보출력,3.학생정보검색 4.종 료");
 			int select = sc.nextInt();
 			
 			if(select==1) {

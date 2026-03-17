@@ -33,5 +33,16 @@ public class StudentService {
 		return ar;
 		
 	}
+	
+	
+	//학생검색 
+	public void search() {
+		
+	}
+	
+	
+	
+	
+	
 
 }
