@@ -80,6 +80,9 @@ public class StudentService {
 		
 	}
 	
+	//학생의이름을 입력해서 일치하는 학생의 정보를 삭제
+	//delete
+	
 	
 	
 	
