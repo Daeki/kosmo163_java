@@ -21,6 +21,15 @@ public class StudentController {
 				ar= ss.init();
 			}else if(select==2) {
 				sv.view(ar);
+			
+			}else if(select==3) {
+				StudentDTO studentDTO = ss.search(ar);
+				if(studentDTO != null) {
+					sv.view(studentDTO);
+				}else {
+					System.out.println("찾는 학생이 없다");
+				}
+			
 			}else {
 				break;
 			}

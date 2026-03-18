@@ -1,5 +1,6 @@
 package com.winter.util.ex1;
 
+import java.util.Scanner;
 import java.util.StringTokenizer;
 
 public class StudentService {
@@ -16,6 +17,7 @@ public class StudentService {
 		StudentDTO [] ar = new StudentDTO[3];
 		int index=0;
 		while(st.hasMoreTokens()) {
+			System.out.println();
 			StudentDTO dto = new StudentDTO();
 			String s1 = st.nextToken();
 			dto.setName(s1);
@@ -36,8 +38,18 @@ public class StudentService {
 	
 	
 	//학생검색 
-	public void search() {
+	public StudentDTO search(StudentDTO [] ar) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("학생이름을 입력");
+		String name=sc.next();
+		for(int i=0;i<ar.length;i++) {
+			if(name.equals(ar[i].getName())) {
+				return ar[i];
+				
+			}
+		}
 		
+		return null;
 	}
 	
 	
