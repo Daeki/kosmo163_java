@@ -1,5 +1,6 @@
 package com.winter.util.ex1;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class StudentController {
@@ -12,9 +13,13 @@ public class StudentController {
 		
 		//
 		boolean flag = true;
-		StudentDTO [] ar= null;
+		ArrayList<StudentDTO> ar= null;
 		while(flag) {
-			System.out.println("1.학생정보초기화, 2.학생정보출력,3.학생정보검색 4.종 료");
+			System.out.println("1.학생정보초기화");
+			System.out.println("2.학생정보출력");
+			System.out.println("3.학생정보검색");
+			System.out.println("4.학생정보추가");
+			System.out.println("5.종 료");
 			int select = sc.nextInt();
 			
 			if(select==1) {
@@ -30,6 +35,10 @@ public class StudentController {
 					System.out.println("찾는 학생이 없다");
 				}
 			
+			}else if(select==4) {
+				ss.add(ar);
+//				StudentDTO studentDTO = ss.add();
+//				ar.add(studentDTO);
 			}else {
 				break;
 			}
