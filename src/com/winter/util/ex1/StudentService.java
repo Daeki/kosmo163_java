@@ -1,5 +1,8 @@
 package com.winter.util.ex1;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.StringTokenizer;
@@ -14,7 +17,39 @@ public class StudentService {
 		this.sc = new Scanner(System.in);
 	}
 	
+	public void backup() {
+		//학생들의 정보를 info.txt 저장하기
+	}
+	
 	public ArrayList<StudentDTO> init() {
+		//info.txt의 내용을 출력
+		File file = new File("D:\\DK\\sub1\\sub2\\info.txt");
+		ArrayList<StudentDTO> list = new ArrayList<>();
+		try {
+			FileReader fileReader = new FileReader(file);
+			BufferedReader br = new BufferedReader(fileReader);
+			String s=null;
+			while((s = br.readLine()) != null) {
+				String [] ar = s.split("-");
+				StudentDTO studentDTO = new StudentDTO();
+				studentDTO.setName(ar[0]);
+				studentDTO.setKor(Integer.parseInt(ar[1]));
+				studentDTO.setEng(Integer.parseInt(ar[2]));
+				studentDTO.setMath(Integer.parseInt(ar[3]));
+				list.add(studentDTO);
+			}
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return list;
+		
+	}
+	
+	
+	public ArrayList<StudentDTO> initOld() {
 		//data를 파싱 작업
 		StringTokenizer st = new StringTokenizer(this.data, "-");
 		//StudentDTO [] ar = new StudentDTO[3];
