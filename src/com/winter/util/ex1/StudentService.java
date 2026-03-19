@@ -82,6 +82,20 @@ public class StudentService {
 	
 	//학생의이름을 입력해서 일치하는 학생의 정보를 삭제
 	//delete
+	public void delete(ArrayList<StudentDTO> ar) {
+		System.out.println("학생의 이름 입력");
+		String name = sc.next();
+		
+		for(int i=0;i<ar.size();i++) {
+			if(ar.get(i).getName().equals(name)) {
+				ar.remove(i);
+				return;
+			}
+		}
+		
+		//return false;
+		
+	}
 	
 	
 	
